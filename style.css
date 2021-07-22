@@ -1,0 +1,6 @@
+input, textarea, button {
+    display: block;
+    outline: 2px solid lightgrey;
+    border: none;
+    margin-top: 10px;
+}

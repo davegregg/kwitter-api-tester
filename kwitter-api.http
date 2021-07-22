@@ -1,0 +1,49 @@
+@api = https://socialapp-api.herokuapp.com
+@user_name = sirpickles
+@user_display_name = Sir Pickles
+@user_password = gherkin
+@user_token = foo
+
+###
+# CREATE user (Content-Type header required)
+POST {{api}}/users
+Content-Type: application/json
+
+{
+  "username": "{{user_name}}",
+  "displayName": "{{user_display_name}}",
+  "password": "{{user_password}}"
+}
+
+###
+# LOGIN user (Content-Type header required)
+POST {{api}}/auth/login
+Content-Type: application/json
+
+{
+    "username": "{{user_name}}",
+    "password": "{{user_password}}"
+}
+
+###
+# DELETE user (Authorization header required)
+DELETE {{api}}/users/{{user_name}}
+Authorization: Bearer {{user_token}}
+
+###
+# CREATE message (Authorization & Content-Type headers required)
+POST {{api}}/messages
+Authorization: Bearer {{user_token}}
+Content-Type: application/json
+
+{
+    "text": "Charles Barkley bought me a beer. #sircharles"
+}
+
+###
+# GET all users
+GET {{api}}/users
+
+###
+# GET one user
+GET {{api}}/users/{{user_name}}

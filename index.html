@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwitter API Tester</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Kwitter API Tester</h1>
+    
+    <input type="text" name="username" placeholder="Username">
+    <input type="text" name="display-name" placeholder="Display Name">
+    <input type="password" name="password" placeholder="Password">
+    <input type="password" name="token" placeholder="Auth Token">
+    <textarea name="message" cols="30" rows="10" placeholder="Enter your message here!"></textarea>
+
+    <button id="create-user-button">Create User</button>
+    <button id="login-user-button">Login User</button>
+    <button id="create-message-button">Create Message</button>
+    <button id="delete-user-button">Delete User</button>
+
+    <script src="./http-client-service.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
